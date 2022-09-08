@@ -3,7 +3,7 @@
 	max-height: 774px;
 }
 
-.intro>.container {
+.intro > .container {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;

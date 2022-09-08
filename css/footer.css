@@ -1,5 +1,5 @@
 .footer {
-	background: #f8f8f8;
+	background: #F8F8F8;
 }
 
 .footer__branding {
@@ -32,6 +32,7 @@
 
 .footer__social-link {
 	margin-right: 35px;
+
 }
 
 @media screen and (max-width: 767px) {
