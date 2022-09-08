@@ -1,0 +1,35 @@
+.footer {
+	background: #F8F8F8;
+}
+
+.footer__branding {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 40px;
+}
+
+.footer__branding-credits {
+	font-family: 'Mulish';
+	font-weight: 300;
+	font-size: 17px;
+	line-height: 28px;
+	color: #848484;
+}
+
+.footer__hr {
+	color: #C4C4C4;
+	height: 0.6px;
+	margin-top: 40px;
+} 
+
+.footer__social {
+	display: flex;
+	justify-content: center;
+	padding-bottom: 40px;
+	padding-top: 30px;
+}
+
+.footer__social-link {
+	margin-right: 35px;
+}

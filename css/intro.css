@@ -1,0 +1,27 @@
+.intro {
+	background-color: #F8F8F8;
+	max-height: 774px;
+}
+
+.intro > .container {
+	padding: 111px 248px 129px 141px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.intro__inner {
+	padding-left: 102px;
+}
+
+.into__inner p {
+	max-width: 450px;
+}
+
+.default__button.learn-more {
+	margin-top: 39px;
+	width: 164px;
+	height: 48px;
+	font-size: 16px;
+	font-weight: 600px;
+}

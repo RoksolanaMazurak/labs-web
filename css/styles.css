@@ -1,0 +1,9 @@
+/*global styles*/
+@import "./global.css";
+
+/*section styles*/
+@import "./header.css";
+@import "./hero.css";
+@import "./intro.css";
+@import "./destinations.css";
+@import "./footer.css";
