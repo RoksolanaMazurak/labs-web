@@ -49,17 +49,6 @@ class UI {
 
 		setTimeout(() => document.querySelector('.alert').remove(), 4000);
 	}
-
-	// static validateInputs(title, author, pages, price) {
-		
-	// 	if(title === '' || author === '' || pages === '' || price === '') {
-	// 		UI.showAlert('Please fill all the gaps to create a book :)', 'danger');
-	// 	} 
-	// 	else if(!isNaN(author) || pages < 0 || price < 0) {
-	// 		UI.showAlert('Please check entered data!', 'danger');
-	// 	}
-	// 	return true;
-	// }
 }
 
 class Store {
