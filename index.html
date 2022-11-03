@@ -2,25 +2,30 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Thousand Sunny</title>
 
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;700&display=swap" rel="stylesheet" />
 
-	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/styles.css" />
 </head>
 
 <body>
 	<section class="hero">
 		<div class="container">
 			<header class="header">
-			<div class="header__logo">
+				<div class="header__menu">
+					<div class="header__menu" onclick="toggleMenu()">
+						<img src="images/menu-icon.svg" alt="Menu icon">
+					</div>
+				</div>
+				<div class="header__logo">
 					<img src="/images/logo.svg" alt="Logo">
 				</div>
-				<nav class="header__nav">
+				<nav id="nav-links" class="header__nav">
 					<ul>
 						<li class="header__nav-item active">
 							<a href="" class="header__nav-link">Home</a>
@@ -36,18 +41,20 @@
 						</li>
 					</ul>
 				</nav>
-				<button class="default__button outlined">Login</button>
-				<button class="default__button">Register</button>
+				<div class="header__entry">
+					<button class="default__button outlined">Login</button>
+					<button class="default__button outlined">Register</button>
+				</div>
 			</header>
 		</div>
 		<div class="container hero__container">
-			<h1 class="hero__heading">Explore and<br>Travel</h1>
+			<h1 class="hero__heading">Explore and<br />Travel</h1>
 			<h3 class="hero__subheading">Holiday finder</h3>
-			<hr>
+			<hr />
 			<div class="hero__inner">
 				<ul class="hero__select">
 					<li class="hero__select-item">
-						<span><img src="images/arrow.svg" alt="arrow"></span>
+						<span><img src="images/arrow.svg" alt="arrow" /></span>
 						<select name="location">
 							<option value="">Location</option>
 							<option value="1">Japan</option>
@@ -57,7 +64,7 @@
 						</select>
 					</li>
 					<li class="hero__select-item">
-						<span><img src="images/arrow.svg" alt="arrow"></span>
+						<span><img src="images/arrow.svg" alt="arrow" /></span>
 						<select name="activity">
 							<option value="">Activity</option>
 							<option value="1">Hiking</option>
@@ -69,7 +76,7 @@
 				</ul>
 				<ul class="hero__select">
 					<li class="hero__select-item">
-						<span><img src="images/arrow.svg" alt="arrow"></span>
+						<span><img src="images/arrow.svg" alt="arrow" /></span>
 						<select name="grade">
 							<option value="">Grade</option>
 							<option value="1">1 star</option>
@@ -80,7 +87,7 @@
 						</select>
 					</li>
 					<li class="hero__select-item">
-						<span><img src="images/arrow.svg" alt="arrow"></span>
+						<span><img src="images/arrow.svg" alt="arrow" /></span>
 						<select name="date">
 							<option value="">Date</option>
 							<option value="1">November 2022</option>
@@ -92,16 +99,19 @@
 				</ul>
 			</div>
 			<button class="default__button explore">Explore</button>
-			<img src="images/hero-image.svg" alt="Hero image" class="hero__illustration">
+			<img src="images/hero-image.svg" alt="Hero image" class="hero__illustration" />
+		</div>
 	</section>
 	<section class="intro">
 		<div class="container">
 			<img src="images/intro-image.svg" alt="Intro image" class="intro__image">
 			<div class="intro__inner">
 				<h2 class="title">A new way to explore the world</h2>
-				<p class="paragraph">For decades travellers have reached for Lonely Planet books when looking to plan and
-					execute their perfect
-					trip, but now, they can also let Lonely Planet Experiences lead the way.</p>
+				<p class="paragraph">
+					For decades travellers have reached for Lonely Planet books when
+					looking to plan and execute their perfect trip, but now, they can
+					also let Lonely Planet Experiences lead the way.
+				</p>
 				<button class="default__button learn-more">Learn more</button>
 			</div>
 		</div>
@@ -109,48 +119,51 @@
 	<section class="destination">
 		<div class="container destination__container">
 			<h2 class="title">Featured destinations</h2>
-			<button class="default__button outlined view-all">View all ></button>
+			<button class="default__button view-all">View all ></button>
 		</div>
 		<ul>
 			<li class="destination-item">
-				<img src="images/raja-ampat.svg" alt="Raja Ampat">
+				<img src="images/raja-ampat.svg" alt="Raja Ampat" />
 				<span class="destination-item-title">Raja Ampat</span>
 				<span class="destination-item-subtittle">Indonesia</span>
 			</li>
 			<li class="destination-item">
-				<img src="images/fanjingshan.svg" alt="Fanjingshan">
+				<img src="images/fanjingshan.svg" alt="Fanjingshan" />
 				<span class="destination-item-title">Fanjingshant</span>
 				<span class="destination-item-subtittle">China</span>
 			</li>
 			<li class="destination-item">
-				<img src="images/vevey.svg" alt="Vevey">
+				<img src="images/vevey.svg" alt="Vevey" />
 				<span class="destination-item-title">Vevey</span>
 				<span class="destination-item-subtittle">Switzerland</span>
 			</li>
 			<li class="destination-item">
 				<img src="images/skadar.svg" alt="Skadar">
-				<span class="destination-item-title">Skadar</span>
-				<span class="destination-item-subtittle">Montenegro</span>
+				<div class="destination-item-name">
+					<span class="destination-item-title">Skadar</span>
+					<span class="destination-item-subtittle">Montenegro</span>
+				</div>
 			</li>
 		</ul>
-		</div>
 	</section>
 	<footer class="footer">
 		<div class="container">
 			<div class="footer__branding">
-				<img src="images/logo.svg" alt="Logo">
+				<img src="images/logo.svg" alt="Logo" />
 				<span class="footer__branding-credits">©2020 Thousand Sunny. All rights reserved</span>
 			</div>
-			<hr class="footer__hr">
+			<hr class="footer__hr" />
 			<div class="footer__social">
 				<a href="#" class="footer__social-link"><img src="images/twitter-icon.svg" alt="twitter icon"></a>
-				<a href="#" class="footer__social-link"><img src="images/facebook-icon.svg" alt="facebook icon"></a>
-				<a href="#" class="footer__social-link"><img src="images/instagram-icon.svg" alt="instagram icon"></a>
-				<a href="#" class="footer__social-link"><img src="images/linkedin-icon.svg" alt="linkedin icon"></a>
-				<a href="#" class="footer__social-link"><img src="images/youtube-icon.svg" alt="youtube icon"></a>
+				<a href="#" class="footer__social-link"><img src="images/facebook-icon.svg" alt="facebook icon" /></a>
+				<a href="#" class="footer__social-link"><img src="images/instagram-icon.svg" alt="instagram icon" /></a>
+				<a href="#" class="footer__social-link"><img src="images/linkedin-icon.svg" alt="linkedin icon" /></a>
+				<a href="#" class="footer__social-link"><img src="images/youtube-icon.svg" alt="youtube icon" /></a>
 			</div>
 		</div>
 	</footer>
+	<script src="js/main.js"></script>
+
 </body>
 
 </html>
