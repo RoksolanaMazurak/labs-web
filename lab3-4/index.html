@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Bookshelf</title>
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg bg-dark navbar-dark py-4 fixed-top">
+		<div class="container">
+			<h4><a href="#" class="navbar-brand">Bookshelf</a></h4>
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a href="#" id="main-btn" class="nav-link">My books</a>
+				</li>
+				<li class="nav-item">
+					<a href="#" id="create-btn" class="nav-link">Create a book</a>
+				</li>
+			</ul>
+			<div class="input-group search-input">
+				<input id="search" type="search" class="form-control" placeholder="Search for a book">
+				<button id="search-btn" class="btn btn-primary btn-md" type="button">Search</button>
+				<button id="cancel-btn" class="btn btn-danger btn-md" type="button">Cancel</button>
+			</div>
+		</div>
+	</nav>
+	<section id="main_page" class="open">
+		<aside style="float:left">
+			<div>
+				<div id="manage-container" class="bg-light d-flex flex-column text-center px-3 pt-5 justify-content-start"
+					style="height: 100vh; width: 40vh">
+					<h5>Manage Books</h5>
+					<hr>
+					<div class="form-check form-switch d-flex justify-content-between align-content-center mt-3">
+						<label class="form-check-label" for="price-sort">Sort books by price</label>
+						<h3><input class="form-check-input" type="checkbox" role="switch" id="price-sort"></h3>
+					</div>
+					<button id="count-total-btn" type="button" class="btn btn-primary btn-md mt-4">
+						Count total price</button>
+					<div id="collapse-total-price" class="collapse pt-3">
+						<div class="card card-body">
+							<h6 class="text-secondary fw-normal">Total price:<br></h6>
+							<h5 id="total-price" class="text-dark fw-semibold"> </h5>
+						</div>
+					</div>
+				</div>
+			</div>
+		</aside>
+		<div style="flex-wrap: wrap;">
+			<ul id="item-list" class="d-flex flex-wrap justify-content-start flex-row"></ul>
+		</div>
+	</section>
+	<section id="create_page">
+		<div id="create_page-container" class="container">
+			<h1 class="mb-5 text-center pt-5">Create a book</h1>
+			<div id="form-wrapper" class="d-flex justify-content-center">
+				<form id="create_page-form">
+					<div class="mb-3">
+						<label for="book-title">Title</label>
+						<input type="text" class="form-control form-control-lg" id="title">
+					</div>
+					<div class="mb-3">
+						<label for="book-title">Author</label>
+						<input type="text" class="form-control form-control-lg" id="author">
+					</div>
+					<div class="mb-3">
+						<label for="book-title">Number of pages</label>
+						<input type="number" min="0" class="form-control form-control-lg" id="pages">
+					</div>
+					<div class="mb-3">
+						<label for="book-price">Price</label>
+						<input type="number" min="0" class="form-control form-control-lg" id="price">
+					</div>
+					<div class="d-grid mt-5">
+						<button class="btn btn-primary" formnovalidate type="submit">Create</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</section>
+	<section id="edit_page">
+		<div id="edit_page-container" class="container">
+			<h1 class="mb-5 text-center pt-5">Edit a book</h1>
+			<div id="form-wrapper" class="d-flex justify-content-center">
+				<form id="edit_page-form">
+					<div class="mb-3">
+						<label for="book-title">Title</label>
+						<input type="text" class="form-control form-control-lg" id="title-edit">
+					</div>
+					<div class="mb-3">
+						<label for="book-title">Author</label>
+						<input type="text" class="form-control form-control-lg" id="author-edit">
+					</div>
+					<div class="mb-3">
+						<label for="book-title">Number of pages</label>
+						<input type="number" class="form-control form-control-lg" id="pages-edit">
+					</div>
+					<div class="mb-3">
+						<label for="book-price">Price</label>
+						<input type="number" min="0" class="form-control form-control-lg" id="price-edit">
+					</div>
+					<div class="d-grid mt-5">
+						<button class="btn btn-primary" type="submit">Save changes</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</section>
+
+	<script src="js/main.js"></script>
+</body>
+
+</html>
