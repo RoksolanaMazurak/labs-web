@@ -2,168 +2,119 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Thousand Sunny</title>
-
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
-	<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;700&display=swap" rel="stylesheet" />
-
-	<link rel="stylesheet" href="css/styles.css" />
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Bookshelf</title>
 </head>
 
 <body>
-	<section class="hero">
+	<nav class="navbar navbar-expand-lg bg-dark navbar-dark py-4 fixed-top">
 		<div class="container">
-			<header class="header">
-				<div class="header__menu">
-					<div class="header__menu" onclick="toggleMenu()">
-						<img src="images/menu-icon.svg" alt="Menu icon">
+			<h4><a href="#" class="navbar-brand">Bookshelf</a></h4>
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a href="#" id="main-btn" class="nav-link">My books</a>
+				</li>
+				<li class="nav-item">
+					<a href="#" id="create-btn" class="nav-link">Create a book</a>
+				</li>
+			</ul>
+			<div class="input-group search-input">
+				<input id="search" type="search" class="form-control" placeholder="Search for a book">
+				<button id="search-btn" class="btn btn-primary btn-md" type="button">Search</button>
+				<button id="cancel-btn" class="btn btn-danger btn-md" type="button">Cancel</button>
+			</div>
+		</div>
+	</nav>
+	<section id="main_page" class="open">
+		<aside style="float:left">
+			<div>
+				<div id="manage-container" class="bg-light d-flex flex-column text-center px-3 pt-5 justify-content-start"
+					style="height: 100vh; width: 40vh">
+					<h5>Manage Books</h5>
+					<hr>
+					<div class="form-check form-switch d-flex justify-content-between align-content-center mt-3">
+						<label class="form-check-label" for="price-sort">Sort books by price</label>
+						<h3><input class="form-check-input" type="checkbox" role="switch" id="price-sort"></h3>
+					</div>
+					<button id="count-total-btn" type="button" class="btn btn-primary btn-md mt-4">
+						Count total price</button>
+					<div id="collapse-total-price" class="collapse pt-3">
+						<div class="card card-body">
+							<h6 class="text-secondary fw-normal">Total price:<br></h6>
+							<h5 id="total-price" class="text-dark fw-semibold"> </h5>
+						</div>
 					</div>
 				</div>
-				<div class="header__logo">
-					<img src="/images/logo.svg" alt="Logo">
-				</div>
-				<nav id="nav-links" class="header__nav">
-					<ul>
-						<li class="header__nav-item active">
-							<a href="" class="header__nav-link">Home</a>
-						</li>
-						<li class="header__nav-item">
-							<a href="" class="header__nav-link">Destinations</a>
-						</li>
-						<li class="header__nav-item">
-							<a href="" class="header__nav-link">About</a>
-						</li>
-						<li class="header__nav-item">
-							<a href="" class="header__nav-link">Partner</a>
-						</li>
-					</ul>
-				</nav>
-				<div class="header__entry">
-					<button class="default__button outlined">Login</button>
-					<button class="default__button outlined">Register</button>
-				</div>
-			</header>
-		</div>
-		<div class="container hero__container">
-			<h1 class="hero__heading">Explore and<br />Travel</h1>
-			<h3 class="hero__subheading">Holiday finder</h3>
-			<hr />
-			<div class="hero__inner">
-				<ul class="hero__select">
-					<li class="hero__select-item">
-						<span><img src="images/arrow.svg" alt="arrow" /></span>
-						<select name="location">
-							<option value="">Location</option>
-							<option value="1">Japan</option>
-							<option value="2">USA</option>
-							<option value="3">Ukraine</option>
-							<option value="4">New Zeland</option>
-						</select>
-					</li>
-					<li class="hero__select-item">
-						<span><img src="images/arrow.svg" alt="arrow" /></span>
-						<select name="activity">
-							<option value="">Activity</option>
-							<option value="1">Hiking</option>
-							<option value="2">Skiing</option>
-							<option value="3">Canoeing</option>
-							<option value="4">Camping</option>
-						</select>
-					</li>
-				</ul>
-				<ul class="hero__select">
-					<li class="hero__select-item">
-						<span><img src="images/arrow.svg" alt="arrow" /></span>
-						<select name="grade">
-							<option value="">Grade</option>
-							<option value="1">1 star</option>
-							<option value="2">2 stars</option>
-							<option value="3">3 stars</option>
-							<option value="4">4 stars</option>
-							<option value="4">5 stars</option>
-						</select>
-					</li>
-					<li class="hero__select-item">
-						<span><img src="images/arrow.svg" alt="arrow" /></span>
-						<select name="date">
-							<option value="">Date</option>
-							<option value="1">November 2022</option>
-							<option value="2">December 2022</option>
-							<option value="3">January 2023</option>
-							<option value="4">February 2023</option>
-						</select>
-					</li>
-				</ul>
 			</div>
-			<button class="default__button explore">Explore</button>
-			<img src="images/hero-image.svg" alt="Hero image" class="hero__illustration" />
+		</aside>
+		<div style="flex-wrap: wrap;">
+			<ul id="item-list" class="d-flex flex-wrap justify-content-start flex-row"></ul>
 		</div>
 	</section>
-	<section class="intro">
-		<div class="container">
-			<img src="images/intro-image.svg" alt="Intro image" class="intro__image">
-			<div class="intro__inner">
-				<h2 class="title">A new way to explore the world</h2>
-				<p class="paragraph">
-					For decades travellers have reached for Lonely Planet books when
-					looking to plan and execute their perfect trip, but now, they can
-					also let Lonely Planet Experiences lead the way.
-				</p>
-				<button class="default__button learn-more">Learn more</button>
+	<section id="create_page">
+		<div id="create_page-container" class="container">
+			<h1 class="mb-5 text-center pt-5">Create a book</h1>
+			<div id="form-wrapper" class="d-flex justify-content-center">
+				<form id="create_page-form">
+					<div class="mb-3">
+						<label for="book-title">Title</label>
+						<input type="text" class="form-control form-control-lg" id="title">
+					</div>
+					<div class="mb-3">
+						<label for="book-title">Author</label>
+						<input type="text" class="form-control form-control-lg" id="author">
+					</div>
+					<div class="mb-3">
+						<label for="book-title">Number of pages</label>
+						<input type="number" min="0" class="form-control form-control-lg" id="pages">
+					</div>
+					<div class="mb-3">
+						<label for="book-price">Price</label>
+						<input type="number" min="0" class="form-control form-control-lg" id="price">
+					</div>
+					<div class="d-grid mt-5">
+						<button class="btn btn-primary" formnovalidate type="submit">Create</button>
+					</div>
+				</form>
 			</div>
 		</div>
 	</section>
-	<section class="destination">
-		<div class="container destination__container">
-			<h2 class="title">Featured destinations</h2>
-			<button class="default__button view-all">View all ></button>
+	<section id="edit_page">
+		<div id="edit_page-container" class="container">
+			<h1 class="mb-5 text-center pt-5">Edit a book</h1>
+			<div id="form-wrapper" class="d-flex justify-content-center">
+				<form id="edit_page-form">
+					<div class="mb-3">
+						<label for="book-title">Title</label>
+						<input type="text" class="form-control form-control-lg" id="title-edit">
+					</div>
+					<div class="mb-3">
+						<label for="book-title">Author</label>
+						<input type="text" class="form-control form-control-lg" id="author-edit">
+					</div>
+					<div class="mb-3">
+						<label for="book-title">Number of pages</label>
+						<input type="number" class="form-control form-control-lg" id="pages-edit">
+					</div>
+					<div class="mb-3">
+						<label for="book-price">Price</label>
+						<input type="number" min="0" class="form-control form-control-lg" id="price-edit">
+					</div>
+					<div class="d-grid mt-5">
+						<button class="btn btn-primary" type="submit">Save changes</button>
+					</div>
+				</form>
+			</div>
 		</div>
-		<ul>
-			<li class="destination-item">
-				<img src="images/raja-ampat.svg" alt="Raja Ampat" />
-				<span class="destination-item-title">Raja Ampat</span>
-				<span class="destination-item-subtittle">Indonesia</span>
-			</li>
-			<li class="destination-item">
-				<img src="images/fanjingshan.svg" alt="Fanjingshan" />
-				<span class="destination-item-title">Fanjingshant</span>
-				<span class="destination-item-subtittle">China</span>
-			</li>
-			<li class="destination-item">
-				<img src="images/vevey.svg" alt="Vevey" />
-				<span class="destination-item-title">Vevey</span>
-				<span class="destination-item-subtittle">Switzerland</span>
-			</li>
-			<li class="destination-item">
-				<img src="images/skadar.svg" alt="Skadar">
-				<div class="destination-item-name">
-					<span class="destination-item-title">Skadar</span>
-					<span class="destination-item-subtittle">Montenegro</span>
-				</div>
-			</li>
-		</ul>
 	</section>
-	<footer class="footer">
-		<div class="container">
-			<div class="footer__branding">
-				<img src="images/logo.svg" alt="Logo" />
-				<span class="footer__branding-credits">©2020 Thousand Sunny. All rights reserved</span>
-			</div>
-			<hr class="footer__hr" />
-			<div class="footer__social">
-				<a href="#" class="footer__social-link"><img src="images/twitter-icon.svg" alt="twitter icon"></a>
-				<a href="#" class="footer__social-link"><img src="images/facebook-icon.svg" alt="facebook icon" /></a>
-				<a href="#" class="footer__social-link"><img src="images/instagram-icon.svg" alt="instagram icon" /></a>
-				<a href="#" class="footer__social-link"><img src="images/linkedin-icon.svg" alt="linkedin icon" /></a>
-				<a href="#" class="footer__social-link"><img src="images/youtube-icon.svg" alt="youtube icon" /></a>
-			</div>
-		</div>
-	</footer>
-	<script src="js/main.js"></script>
 
+	<script src="js/main.js" type="module"></script>
 </body>
 
 </html>
